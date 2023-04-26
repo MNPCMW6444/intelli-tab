@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Tab, getOpenTabs, categorizeTabs } from "./categorizer";
 import { TabList } from "./components/TabList";
-
+import "./background";
 const App: React.FC = () => {
   const [categorizedTabs, setCategorizedTabs] = useState<Tab[]>([]);
 

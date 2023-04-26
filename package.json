@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && rm -rf build/static/js/*.map && cp public/manifest.json build/manifest.json && cp -r public/icons build/icons && cp -r src/background.js build/background.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

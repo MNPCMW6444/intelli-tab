@@ -7,13 +7,17 @@ export interface Tab {
   category: string;
 }
 
-// Function to get open tabs
 export const getOpenTabs = async (): Promise<chrome.tabs.Tab[]> => {
-  return new Promise((resolve) => {
-    chrome.tabs.query({}, (tabs) => {
-      resolve(tabs);
+  if (typeof chrome !== "undefined" && chrome.tabs) {
+    return new Promise((resolve) => {
+      chrome.tabs.query({}, (tabs) => {
+        resolve(tabs);
+      });
     });
-  });
+  } else {
+    console.log("Chrome object is not defined");
+    return [];
+  }
 };
 
 // Function to analyze tab content and categorize it
