@@ -5,7 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(
-  document.getElementById("popup-root") as HTMLElement // This line has been updated
+  document.getElementById("rootz") as HTMLElement // This line has been updated
 );
 root.render(
   <React.StrictMode>

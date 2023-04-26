@@ -3,7 +3,7 @@
   "name": "IntelliTab",
   "version": "1.0.0",
   "description": "Automatically sort and categorize your open tabs for better organization and productivity.",
-  "permissions": ["tabs", "storage"],
+  "permissions": ["tabs", "activeTab", "storage"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
