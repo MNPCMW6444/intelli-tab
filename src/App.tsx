@@ -1,26 +1,26 @@
-import React, { useEffect, useState } from "react";
-import { Tab, getOpenTabs, categorizeTabs } from "./categorizer";
-import { TabList } from "./components/TabList";
-import "./background";
-const App: React.FC = () => {
-  const [categorizedTabs, setCategorizedTabs] = useState<Tab[]>([]);
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
 
-  useEffect(() => {
-    const fetchAndCategorizeTabs = async () => {
-      const openTabs = await getOpenTabs();
-      const categorized = await categorizeTabs(openTabs);
-      setCategorizedTabs(categorized);
-    };
-
-    fetchAndCategorizeTabs();
-  }, []);
-
+function App() {
   return (
     <div className="App">
-      <h1>IntelliTab</h1>
-      <TabList tabs={categorizedTabs} />
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.tsx</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
-};
+}
 
 export default App;
